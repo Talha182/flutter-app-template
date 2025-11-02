@@ -7,13 +7,16 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: AppColors.white,
       textTheme: AppTextStyles.textTheme,
       appBarTheme: const AppBarTheme(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.white,
         elevation: 0,
         centerTitle: true,
-        foregroundColor: Colors.black87,
+        foregroundColor: AppColors.textPrimary,
+      ),
+      iconTheme: const IconThemeData(
+        color: AppColors.iconColor,
       ),
     );
   }
@@ -30,6 +33,9 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         elevation: 0,
         centerTitle: true,
+      ),
+      iconTheme: const IconThemeData(
+        color: AppColors.iconColor,
       ),
     );
   }

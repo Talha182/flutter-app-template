@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color primary = Color(0xFF1B5E20); // green
-  static const Color secondary = Color(0xFF006064); // teal
-  static const Color greyDark = Color(0xFF4E545C);
-  static const Color greyLight = Color(0xFFB0BEC5);
+  // Brand color
+  static const Color primary = Color(0xFF1FC3AC); // Primary teal
+
+  // Text colors
+  static const Color textPrimary = Color(0xFF1E1E1E); // Main black text
+  static const Color textSecondary = Color(0xFF667085); // Descriptions / secondary text
+
+  // UI colors
+  static const Color iconColor = Color(0xFF9AA4B2); // Icons / placeholders
+  static const Color outlineColor = Color(0xFFEEF2F6); // Borders / outlines / cards
+
+  // Base
+  static const Color white = Color(0xFFFFFFFF);
 }
