@@ -4,39 +4,41 @@ import '../constants/app_text_styles.dart';
 
 class AppTheme {
   static ThemeData get lightTheme {
+    final colorScheme = ColorScheme.fromSeed(seedColor: AppColors.primary);
+
     return ThemeData(
       useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
+      colorScheme: colorScheme,
       scaffoldBackgroundColor: AppColors.white,
-      textTheme: AppTextStyles.textTheme,
-      appBarTheme: const AppBarTheme(
+      textTheme: ResponsiveTextTheme.scaled,
+      appBarTheme: AppBarTheme(
         backgroundColor: AppColors.white,
         elevation: 0,
         centerTitle: true,
-        foregroundColor: AppColors.textPrimary,
+        foregroundColor: colorScheme.onSurface,
       ),
-      iconTheme: const IconThemeData(
-        color: AppColors.iconColor,
-      ),
+      iconTheme: IconThemeData(color: colorScheme.onSurfaceVariant),
     );
   }
 
   static ThemeData get darkTheme {
+    final colorScheme = ColorScheme.fromSeed(
+      seedColor: AppColors.primary,
+      brightness: Brightness.dark,
+    );
+
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: AppColors.primary,
-        brightness: Brightness.dark,
-      ),
-      textTheme: AppTextStyles.textTheme,
-      appBarTheme: const AppBarTheme(
+      colorScheme: colorScheme,
+      textTheme: ResponsiveTextTheme.scaled,
+      appBarTheme: AppBarTheme(
         elevation: 0,
         centerTitle: true,
+        backgroundColor: colorScheme.surface,
+        foregroundColor: colorScheme.onSurface,
       ),
-      iconTheme: const IconThemeData(
-        color: AppColors.iconColor,
-      ),
+      iconTheme: IconThemeData(color: colorScheme.onSurfaceVariant),
     );
   }
 }
