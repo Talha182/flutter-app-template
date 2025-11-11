@@ -18,12 +18,20 @@ dependencies:
   http: ^1.5.0
   get_it: ^8.3.0
   flutter_native_splash: ^2.4.7
+  floor: ^1.5.0
+  path: ^1.9.1
+  path_provider: ^2.1.5
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^5.0.0
+  floor_generator: ^1.5.0
+  build_runner: ^2.4.13
+
+
 
 flutter:
 

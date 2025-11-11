@@ -1,48 +1,31 @@
-import '../config/size_config.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppSizes {
-  // Base constants
-  static const double paddingXS = 4;
-  static const double paddingS = 8;
-  static const double paddingM = 16;
-  static const double paddingL = 24;
-  static const double paddingXL = 32;
+  // Padding
+  static double paddingXS = 4.w;
+  static double paddingS = 8.w;
+  static double paddingM = 16.w;
+  static double paddingL = 24.w;
+  static double paddingXL = 32.w;
 
-  static const double radiusS = 6;
-  static const double radiusM = 12;
-  static const double radiusL = 20;
-  static const double radiusXL = 32;
+  // Spacing (vertical)
+  static double spacingXS = 4.h;
+  static double spacingS = 8.h;
+  static double spacingM = 12.h;
+  static double spacingL = 16.h;
+  static double spacingXL = 24.h;
 
-  static const double fontS = 12;
-  static const double fontM = 14;
-  static const double fontL = 18;
-  static const double fontXL = 24;
+  // Radius
+  static double radiusXS = 4.r;
+  static double radiusS = 6.r;
+  static double radiusSM = 8.r;
+  static double radiusM = 12.r;
+  static double radiusML = 16.r;
+  static double radiusL = 20.r;
+  static double radiusXL = 32.r;
 
-  static const double buttonHeight = 56;
-  static const double inputHeight = 52;
-  static const double appBarHeight = 64;
-
-  /// Example: Return spacing adjusted per device type
-  static double responsiveSpacing() {
-    switch (SizeConfig.type) {
-      case DeviceType.mobile:
-        return 16 * SizeConfig.scale;
-      case DeviceType.tablet:
-        return 24 * SizeConfig.scale;
-      case DeviceType.desktop:
-        return 32 * SizeConfig.scale;
-    }
-  }
-
-  /// Example: Return number of grid columns
-  static int gridColumns() {
-    switch (SizeConfig.type) {
-      case DeviceType.mobile:
-        return 2;
-      case DeviceType.tablet:
-        return 4;
-      case DeviceType.desktop:
-        return 6;
-    }
-  }
+  // Component heights
+  static double buttonHeight = 56.h;
+  static double inputHeight = 52.h;
+  static double appBarHeight = 64.h;
 }
